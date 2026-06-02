@@ -4,8 +4,8 @@
 <meta name="robots" content="noindex, nofollow">
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>MAE Capital — Mortgage &amp; Real Estate, Under One Roof</title>
-<meta name="description" content="Demo concept — a cleaner, guided homepage for a mortgage and real estate practice. Family-style help, end to end." />
+<title>A clearer first step for every new lead — Intake demo</title>
+<meta name="description" content="Demo concept — a guided intake and routing layer designed to sit on top of an existing mortgage and real estate marketing setup." />
 <style>
   :root {
     --bg: #faf7f2;
@@ -14,10 +14,10 @@
     --ink-soft: #4a5a63;
     --muted: #7b8a91;
     --line: #e5dccc;
-    --brand: #1f4d3f;        /* deep forest */
+    --brand: #1f4d3f;
     --brand-dark: #163a30;
     --brand-soft: #e9efe9;
-    --accent: #b8894a;        /* warm bronze */
+    --accent: #b8894a;
     --accent-soft: #f3e9d8;
     --white: #ffffff;
     --radius: 14px;
@@ -35,7 +35,7 @@
     font-family: var(--font-sans);
     color: var(--ink);
     background: var(--bg);
-    line-height: 1.55;
+    line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -44,11 +44,12 @@
   img { max-width: 100%; display: block; }
 
   .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+  .container-narrow { max-width: 880px; margin: 0 auto; padding: 0 24px; }
 
-  h1, h2, h3, h4 { font-family: var(--font-serif); font-weight: 600; letter-spacing: -0.01em; color: var(--ink); margin: 0 0 .4em; line-height: 1.15; }
-  h1 { font-size: clamp(2.1rem, 4.5vw, 3.4rem); }
-  h2 { font-size: clamp(1.6rem, 3vw, 2.3rem); }
-  h3 { font-size: 1.25rem; }
+  h1, h2, h3, h4 { font-family: var(--font-serif); font-weight: 600; letter-spacing: -0.01em; color: var(--ink); margin: 0 0 .4em; line-height: 1.18; }
+  h1 { font-size: clamp(2.1rem, 4.5vw, 3.2rem); }
+  h2 { font-size: clamp(1.55rem, 2.8vw, 2.1rem); }
+  h3 { font-size: 1.2rem; }
   p { margin: 0 0 1em; color: var(--ink-soft); }
 
   /* ----- NAV ----- */
@@ -60,31 +61,31 @@
   }
   .nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; }
   .logo {
-    display: flex; align-items: baseline; gap: 8px;
-    font-family: var(--font-serif); font-size: 1.45rem; font-weight: 600;
-    color: var(--brand); letter-spacing: .02em;
+    display: flex; align-items: center; gap: 10px;
+    font-family: var(--font-serif); font-size: 1.4rem; font-weight: 600;
+    color: var(--brand); letter-spacing: .01em;
   }
   .logo-mark {
     display:inline-flex; align-items:center; justify-content:center;
     width: 34px; height: 34px; border-radius: 50%;
     background: var(--brand); color: var(--white);
     font-family: var(--font-serif); font-size: 1rem; font-weight: 600;
-    margin-right: 2px;
   }
-  .logo small { color: var(--muted); font-family: var(--font-sans); font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; font-weight: 600; }
-  .nav-links { display: flex; gap: 28px; align-items: center; }
-  .nav-links a { color: var(--ink-soft); font-weight: 500; font-size: .95rem; }
+  .logo-text { line-height: 1.05; }
+  .logo-text small { display:block; color: var(--muted); font-family: var(--font-sans); font-size: .68rem; letter-spacing: .18em; text-transform: uppercase; font-weight: 600; }
+  .nav-links { display: flex; gap: 26px; align-items: center; }
+  .nav-links a { color: var(--ink-soft); font-weight: 500; font-size: .94rem; }
   .nav-links a:hover { color: var(--brand); text-decoration: none; }
   .nav-cta {
     background: var(--brand); color: var(--white);
     padding: 10px 18px; border-radius: 999px; font-size: .9rem; font-weight: 600;
   }
   .nav-cta:hover { background: var(--brand-dark); text-decoration: none; color: var(--white); }
-  @media (max-width: 720px) { .nav-links a:not(.nav-cta) { display: none; } }
+  @media (max-width: 760px) { .nav-links a:not(.nav-cta) { display: none; } }
 
   /* ----- HERO ----- */
   .hero { padding: 72px 0 56px; background: linear-gradient(180deg, var(--bg) 0%, var(--bg-alt) 100%); }
-  .hero-inner { display: grid; grid-template-columns: 1.05fr .95fr; gap: 48px; align-items: center; }
+  .hero-inner { display: grid; grid-template-columns: 1.05fr .95fr; gap: 56px; align-items: center; }
   @media (max-width: 880px) { .hero-inner { grid-template-columns: 1fr; gap: 36px; } }
   .eyebrow {
     display: inline-block;
@@ -92,7 +93,7 @@
     color: var(--accent); font-weight: 700; margin-bottom: 14px;
   }
   .hero h1 { margin-bottom: 18px; }
-  .hero p.lead { font-size: 1.15rem; color: var(--ink-soft); margin-bottom: 28px; max-width: 520px; }
+  .hero p.lead { font-size: 1.12rem; color: var(--ink-soft); margin-bottom: 28px; max-width: 540px; }
   .cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
   .btn {
     display: inline-flex; align-items: center; justify-content: center;
@@ -114,50 +115,77 @@
   }
   .hero-card-inner {
     border-radius: 10px; background: linear-gradient(135deg, #f6f1e6 0%, #ebe3d2 100%);
-    padding: 28px; min-height: 360px; display: flex; flex-direction: column; justify-content: space-between;
+    padding: 28px; min-height: 340px; display: flex; flex-direction: column; justify-content: space-between;
   }
-  .badge-row { display: flex; gap: 8px; flex-wrap: wrap; }
-  .badge {
-    background: var(--white); border: 1px solid var(--line);
-    padding: 6px 12px; border-radius: 999px; font-size: .78rem; color: var(--ink-soft); font-weight: 600;
+  .preview-label {
+    font-size: .7rem; letter-spacing: .2em; text-transform: uppercase; color: var(--accent); font-weight: 700;
+    margin-bottom: 14px;
   }
-  .quote {
-    font-family: var(--font-serif); font-size: 1.4rem; color: var(--ink);
-    line-height: 1.35; margin: 24px 0;
+  .preview-list { list-style: none; padding: 0; margin: 0 0 18px; }
+  .preview-list li {
+    display: flex; align-items: center; gap: 12px;
+    padding: 12px 14px; background: rgba(255,255,255,.55); border-radius: 8px;
+    margin-bottom: 8px;
+    font-size: .95rem; color: var(--ink); font-weight: 500;
   }
-  .quote-cite { font-family: var(--font-sans); font-size: .85rem; color: var(--muted); letter-spacing: .04em; }
-  .stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
-  .stat { background: rgba(255,255,255,.6); padding: 12px; border-radius: 8px; text-align: center; }
-  .stat strong { display: block; font-family: var(--font-serif); font-size: 1.3rem; color: var(--brand); }
-  .stat span { font-size: .75rem; color: var(--ink-soft); }
+  .preview-list li .step-dot {
+    width: 24px; height: 24px; border-radius: 50%;
+    background: var(--brand); color: var(--white);
+    display: inline-flex; align-items: center; justify-content: center;
+    font-size: .78rem; font-weight: 700; flex: 0 0 24px;
+  }
+  .preview-foot {
+    font-size: .82rem; color: var(--ink-soft); font-style: italic; line-height: 1.5;
+  }
 
-  /* ----- TRUST STRIP ----- */
-  .trust-strip { padding: 28px 0; background: var(--white); border-bottom: 1px solid var(--line); }
-  .trust-row { display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; align-items: center; }
-  .trust-item { display: flex; align-items: center; gap: 10px; color: var(--ink-soft); font-size: .92rem; font-weight: 500; }
-  .trust-item .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); flex: 0 0 8px; }
+  /* ----- WHAT THIS IMPROVES (4 cards) ----- */
+  .improves-section { padding: 64px 0; background: var(--white); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .improves-head { text-align: center; max-width: 640px; margin: 0 auto 36px; }
+  .improves-head h2 { margin-bottom: 8px; }
+  .improves-head p { font-size: 1.02rem; }
+  .improves-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  @media (max-width: 900px) { .improves-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 520px) { .improves-grid { grid-template-columns: 1fr; } }
+  .improve-card {
+    background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 22px; min-height: 140px;
+  }
+  .improve-card .ico-box {
+    width: 36px; height: 36px; border-radius: 8px;
+    background: var(--brand-soft); color: var(--brand);
+    display: inline-flex; align-items: center; justify-content: center;
+    font-family: var(--font-serif); font-weight: 700; font-size: 1.1rem;
+    margin-bottom: 12px;
+  }
+  .improve-card h4 { font-family: var(--font-serif); font-size: 1.1rem; margin: 0 0 6px; color: var(--ink); }
+  .improve-card p { margin: 0; font-size: .9rem; color: var(--ink-soft); }
 
   /* ----- SECTION GENERIC ----- */
-  section { padding: 80px 0; }
-  .section-head { text-align: center; max-width: 700px; margin: 0 auto 48px; }
-  .section-head p { font-size: 1.05rem; }
+  section { padding: 72px 0; }
+  .section-head { text-align: center; max-width: 680px; margin: 0 auto 36px; }
+  .section-head p { font-size: 1.02rem; }
 
   /* ----- INTAKE FLOW ----- */
-  .intake-section { background: var(--bg-alt); }
+  .intake-section { background: var(--bg-alt); padding: 64px 0 80px; }
   .intake-card {
     background: var(--white); border-radius: var(--radius); box-shadow: var(--shadow-md);
     border: 1px solid var(--line); max-width: 760px; margin: 0 auto;
     overflow: hidden;
   }
-  .intake-head { padding: 22px 28px; border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; background: linear-gradient(180deg, #fffefb 0%, #faf6ee 100%); }
-  .intake-head .step-label { font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); font-weight: 700; }
+  .intake-head {
+    padding: 20px 28px; border-bottom: 1px solid var(--line);
+    display: flex; justify-content: space-between; align-items: center;
+    background: linear-gradient(180deg, #fffefb 0%, #faf6ee 100%);
+    gap: 16px; flex-wrap: wrap;
+  }
+  .intake-head .step-label { font-size: .76rem; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); font-weight: 700; }
   .progress { display: flex; gap: 4px; }
   .progress span { width: 26px; height: 4px; border-radius: 2px; background: var(--line); }
   .progress span.active { background: var(--brand); }
   .progress span.done { background: var(--accent); }
-  .intake-body { padding: 36px 32px; }
-  .intake-body h3 { font-size: 1.55rem; margin-bottom: 6px; }
-  .intake-body p.sub { color: var(--ink-soft); margin-bottom: 28px; }
+  .intake-body { padding: 34px 32px; }
+  .intake-body h3 { font-size: 1.5rem; margin-bottom: 6px; }
+  .intake-body p.sub { color: var(--ink-soft); margin-bottom: 26px; max-width: 540px; }
   .choice-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
   @media (max-width: 560px) { .choice-grid { grid-template-columns: 1fr; } }
   .choice {
@@ -169,13 +197,13 @@
   .choice:hover { border-color: var(--brand); background: #fafafa; }
   .choice.selected { border-color: var(--brand); background: var(--brand-soft); }
   .choice-icon {
-    width: 38px; height: 38px; border-radius: 8px;
+    width: 36px; height: 36px; border-radius: 8px;
     background: var(--accent-soft); color: var(--accent);
-    display: flex; align-items: center; justify-content: center; font-size: 1.05rem; font-weight: 700;
-    flex: 0 0 38px;
+    display: flex; align-items: center; justify-content: center; font-size: 1rem; font-weight: 700;
+    flex: 0 0 36px;
     font-family: var(--font-serif);
   }
-  .choice-text { font-weight: 600; color: var(--ink); font-size: .98rem; }
+  .choice-text { font-weight: 600; color: var(--ink); font-size: .96rem; line-height: 1.3; }
   .choice-text small { display: block; font-weight: 400; color: var(--muted); font-size: .82rem; margin-top: 2px; }
 
   .input-block { margin-bottom: 18px; }
@@ -189,12 +217,16 @@
   .input-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
   @media (max-width: 560px) { .input-row { grid-template-columns: 1fr; } }
 
-  .intake-footer { padding: 20px 32px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; background: #fbfaf6; }
+  .intake-footer {
+    padding: 18px 32px; border-top: 1px solid var(--line);
+    display: flex; justify-content: space-between; align-items: center; background: #fbfaf6;
+    gap: 12px; flex-wrap: wrap;
+  }
   .intake-footer .small-note { font-size: .82rem; color: var(--muted); }
 
   .hidden { display: none !important; }
 
-  /* Review screen "order read-back" */
+  /* Readback / review */
   .review-card {
     background: linear-gradient(180deg, #fffefb 0%, #f5efe2 100%);
     border-radius: var(--radius-sm); border: 1px dashed var(--accent);
@@ -203,36 +235,17 @@
   .review-card .recap-label {
     font-size: .7rem; letter-spacing: .2em; text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 12px;
   }
-  .review-row { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px dashed #d8cdb5; font-size: .98rem; }
+  .review-row { display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-bottom: 1px dashed #d8cdb5; font-size: .96rem; }
   .review-row:last-child { border-bottom: none; }
   .review-row span:first-child { color: var(--ink-soft); }
-  .review-row span:last-child { color: var(--ink); font-weight: 600; text-align: right; }
+  .review-row span:last-child { color: var(--ink); font-weight: 600; text-align: right; word-break: break-word; }
   .next-step-pill {
     margin-top: 16px; padding: 12px 14px; background: var(--brand); color: var(--white);
     border-radius: 10px; text-align: center; font-weight: 600; font-size: .95rem;
   }
 
-  /* Confirmation / contact response */
-  .confirmation { text-align: center; padding: 8px 0 12px; }
-  .check-circle {
-    width: 64px; height: 64px; border-radius: 50%; background: var(--brand-soft);
-    color: var(--brand); display: flex; align-items: center; justify-content: center;
-    font-size: 2rem; margin: 0 auto 16px;
-  }
-  .contact-card-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0; }
-  @media (max-width: 560px) { .contact-card-row { grid-template-columns: 1fr; } }
-  .contact-card {
-    background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius-sm);
-    padding: 18px; text-align: left;
-  }
-  .contact-card .role { font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); font-weight: 700; }
-  .contact-card .name { font-family: var(--font-serif); font-size: 1.25rem; color: var(--ink); margin: 4px 0; }
-  .contact-card .meta { color: var(--ink-soft); font-size: .9rem; }
-  .example-banner {
-    background: #fff6e3; border: 1px solid #f0d999; border-radius: 8px;
-    padding: 10px 14px; font-size: .82rem; color: #6b5223; margin-top: 12px;
-  }
-  .action-buttons { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 18px; }
+  /* Next-step options */
+  .action-buttons { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 18px; }
   @media (max-width: 560px) { .action-buttons { grid-template-columns: 1fr; } }
   .action-btn {
     background: var(--white); border: 1.5px solid var(--line); border-radius: 10px;
@@ -242,88 +255,120 @@
     transition: border-color .15s, background .15s;
   }
   .action-btn:hover { border-color: var(--brand); background: var(--brand-soft); }
-  .calendar-link { display: block; margin-top: 18px; font-size: .9rem; color: var(--brand); }
 
-  /* ----- ROI SECTION ----- */
-  .roi-section { background: var(--brand); color: #f3efe6; padding-bottom: 60px; }
-  .roi-section h2 { color: #fffefb; }
-  .roi-section .section-head p { color: rgba(255,255,255,.78); }
-  .roi-band-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 20px; }
-  @media (max-width: 820px) { .roi-band-row { grid-template-columns: 1fr; } }
-  .roi-card {
-    background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12);
-    border-radius: var(--radius); padding: 26px; backdrop-filter: blur(4px);
+  .text-first-note {
+    margin-top: 16px;
+    background: #fff6e3; border: 1px solid #f0d999; border-radius: 8px;
+    padding: 12px 14px; font-size: .88rem; color: #6b5223; line-height: 1.5;
   }
-  .roi-card .band-label {
-    font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; color: #e6c98a; font-weight: 700;
-  }
-  .roi-card h3 { color: #fffefb; margin: 8px 0 16px; font-size: 1.45rem; }
-  .roi-number {
-    font-family: var(--font-serif); font-size: 2.5rem; color: #fffefb; font-weight: 600;
-    line-height: 1; margin-bottom: 4px;
-  }
-  .roi-sub { color: rgba(255,255,255,.65); font-size: .85rem; margin-bottom: 18px; }
-  .roi-list { list-style: none; padding: 0; margin: 0; }
-  .roi-list li { padding: 6px 0; color: rgba(255,255,255,.85); font-size: .92rem; display: flex; gap: 8px; }
-  .roi-list li::before { content: "→"; color: #e6c98a; font-weight: 700; }
-  .roi-foot { margin-top: 28px; text-align: center; color: rgba(255,255,255,.65); font-size: .82rem; font-style: italic; }
 
-  /* ----- BACKEND SECTION ----- */
+  /* Submitted confirmation */
+  .confirmation { text-align: center; padding: 8px 0 12px; }
+  .check-circle {
+    width: 64px; height: 64px; border-radius: 50%; background: var(--brand-soft);
+    color: var(--brand); display: flex; align-items: center; justify-content: center;
+    font-size: 2rem; margin: 0 auto 14px;
+  }
+
+  /* ----- BEHIND THE SCENES ----- */
   .backend-section { background: var(--white); }
-  .pipeline {
-    display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px;
-    margin-top: 36px;
+  .backend-intro {
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 22px 26px;
+    max-width: 780px;
+    margin: 0 auto 36px;
+    text-align: center;
+    color: var(--ink-soft);
+    font-size: 1rem;
   }
-  @media (max-width: 980px) { .pipeline { grid-template-columns: repeat(2, 1fr); } }
+  .pipeline {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;
+    margin-top: 8px;
+  }
+  @media (max-width: 900px) { .pipeline { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 520px) { .pipeline { grid-template-columns: 1fr; } }
   .step {
     background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius);
-    padding: 20px; position: relative;
+    padding: 20px;
   }
   .step .num {
     display: inline-flex; align-items: center; justify-content: center;
     width: 28px; height: 28px; border-radius: 50%; background: var(--brand); color: var(--white);
     font-size: .85rem; font-weight: 700; margin-bottom: 12px; font-family: var(--font-sans);
   }
-  .step h4 { font-family: var(--font-serif); font-size: 1.1rem; margin: 0 0 6px; }
-  .step p { color: var(--ink-soft); font-size: .88rem; margin: 0; }
-  .step .ico {
-    position: absolute; top: 16px; right: 16px; font-size: 1.2rem; opacity: .55;
+  .step h4 { font-family: var(--font-serif); font-size: 1.08rem; margin: 0 0 6px; }
+  .step p { color: var(--ink-soft); font-size: .9rem; margin: 0; }
+  .concept-note {
+    margin-top: 28px; text-align: center; color: var(--muted); font-size: .85rem; font-style: italic;
   }
 
-  .integrations-row {
-    margin-top: 40px; padding: 24px; background: var(--bg);
-    border-radius: var(--radius); border: 1px solid var(--line);
-    display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; align-items: center;
+  /* ----- ROI EXAMPLE BOX ----- */
+  .roi-section { background: var(--bg-alt); }
+  .roi-box {
+    max-width: 760px; margin: 0 auto;
+    background: var(--white); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 32px 36px; box-shadow: var(--shadow-sm);
   }
-  .integration-chip {
+  .roi-box .roi-label {
+    font-size: .76rem; letter-spacing: .18em; text-transform: uppercase; color: var(--accent); font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .roi-box h3 { font-size: 1.4rem; margin-bottom: 14px; }
+  .roi-box p.roi-lead { color: var(--ink-soft); margin-bottom: 18px; font-size: .98rem; }
+  .roi-list { list-style: none; padding: 0; margin: 0; }
+  .roi-list li {
+    display: flex; gap: 12px; padding: 12px 0;
+    border-bottom: 1px dashed var(--line);
+    font-size: .96rem; color: var(--ink);
+  }
+  .roi-list li:last-child { border-bottom: none; }
+  .roi-list li::before {
+    content: ""; flex: 0 0 8px; width: 8px; height: 8px; border-radius: 50%;
+    background: var(--accent); margin-top: 8px;
+  }
+  .roi-box .roi-foot {
+    margin-top: 16px; font-size: .82rem; color: var(--muted); font-style: italic;
+  }
+
+  /* ----- WORKS WITH EXISTING SYSTEMS ----- */
+  .works-section { background: var(--white); }
+  .works-card {
+    max-width: 820px; margin: 0 auto;
+    background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 36px 40px;
+  }
+  .works-card h3 { font-size: 1.45rem; margin-bottom: 10px; }
+  .works-card p { color: var(--ink-soft); font-size: 1rem; margin-bottom: 14px; }
+  .works-pills { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
+  .works-pill {
     background: var(--white); border: 1px solid var(--line);
-    padding: 8px 16px; border-radius: 999px; font-size: .85rem; color: var(--ink-soft); font-weight: 600;
-    display: inline-flex; align-items: center; gap: 6px;
+    padding: 8px 14px; border-radius: 999px;
+    font-size: .85rem; color: var(--ink-soft); font-weight: 500;
   }
-  .integration-chip::before { content: "●"; color: var(--accent); font-size: .6rem; }
 
   /* ----- CLOSING CTA ----- */
-  .closing { padding: 80px 0; background: var(--bg-alt); text-align: center; }
+  .closing { padding: 72px 0; background: var(--bg-alt); text-align: center; }
   .closing h2 { max-width: 720px; margin: 0 auto 12px; }
   .closing p { max-width: 560px; margin: 0 auto 28px; }
 
   /* ----- FOOTER ----- */
+  .pre-footer-note {
+    background: var(--bg); text-align: center; padding: 18px 24px;
+    font-size: .82rem; color: var(--muted); font-style: italic;
+    border-top: 1px solid var(--line);
+  }
   footer {
     background: #1a2228; color: rgba(255,255,255,.7); padding: 36px 0 28px; font-size: .88rem;
   }
   footer .container { display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; align-items: flex-start; }
   footer .mp-attribution { font-weight: 600; color: #fffefb; }
   footer .mp-attribution a { color: #e6c98a; text-decoration: underline; text-underline-offset: 3px; }
-  footer .demo-note { font-size: .76rem; color: rgba(255,255,255,.4); max-width: 360px; line-height: 1.5; }
+  footer .demo-note { font-size: .76rem; color: rgba(255,255,255,.4); max-width: 380px; line-height: 1.5; }
 
   /* utility */
-  .center { text-align: center; }
   .mt-1 { margin-top: 8px; } .mt-2 { margin-top: 16px; } .mt-3 { margin-top: 24px; }
-
-  /* qualifying questions */
-  .lane-questions { background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 22px; margin-top: 8px; }
-  .lane-questions h4 { font-family: var(--font-serif); font-size: 1.1rem; margin: 0 0 14px; }
 </style>
 </head>
 <body>
@@ -333,16 +378,16 @@
   <div class="container nav-inner">
     <div class="logo">
       <span class="logo-mark">M</span>
-      <div>
-        <div>MAE Capital</div>
-        <small>Mortgage &amp; Real Estate</small>
+      <div class="logo-text">
+        <div>Intake &amp; Routing</div>
+        <small>Demo concept</small>
       </div>
     </div>
     <div class="nav-links">
-      <a href="#how">How we help</a>
-      <a href="#flow">Get started</a>
-      <a href="#behind">Behind the scenes</a>
-      <a href="#flow" class="nav-cta">Talk to a specialist</a>
+      <a href="#improves">What it improves</a>
+      <a href="#flow">Start here</a>
+      <a href="#behind">How routing works</a>
+      <a href="#flow" class="nav-cta">Start here</a>
     </div>
   </div>
 </nav>
@@ -351,60 +396,75 @@
 <header class="hero">
   <div class="container hero-inner">
     <div>
-      <span class="eyebrow">Rocklin, CA · since 1990</span>
-      <h1>Mortgage &amp; real estate, handled like family would.</h1>
-      <p class="lead">One team. One conversation. Whether you're buying, refinancing, selling, or working a private-money deal — we'll meet you where you are and walk you through it.</p>
+      <span class="eyebrow">A guided intake concept</span>
+      <h1>A clearer first step for every new lead.</h1>
+      <p class="lead">This demo shows how a guided intake flow can help buyers, sellers, borrowers, and investors reach the right person faster — without replacing your current website.</p>
       <div class="cta-row">
-        <a href="#flow" class="btn btn-primary">Tell us what you need →</a>
-        <a href="#how" class="btn btn-outline">See how it works</a>
+        <a href="#flow" class="btn btn-primary">Start here →</a>
+        <a href="#behind" class="btn btn-outline">See how routing works</a>
       </div>
     </div>
-    <aside class="hero-card" aria-label="Trust card">
+    <aside class="hero-card" aria-label="Preview of the guided intake">
       <div class="hero-card-inner">
-        <div class="badge-row">
-          <span class="badge">35+ years</span>
-          <span class="badge">Licensed CA broker</span>
-          <span class="badge">Mortgage + Real Estate</span>
+        <div>
+          <div class="preview-label">A preview of the flow</div>
+          <ul class="preview-list">
+            <li><span class="step-dot">1</span> What do you need help with?</li>
+            <li><span class="step-dot">2</span> How soon are you looking to move forward?</li>
+            <li><span class="step-dot">3</span> Best way to reach you</li>
+            <li><span class="step-dot">4</span> A short read-back, then a next step</li>
+          </ul>
         </div>
-        <div class="quote">
-          "They treated us like family. We closed in 21 days and never once felt lost in the process."
-          <div class="quote-cite mt-2">— K. Anders, Rocklin homeowner</div>
-        </div>
-        <div class="stat-row">
-          <div class="stat"><strong>10–20</strong><span>new families helped weekly</span></div>
-          <div class="stat"><strong>21 days</strong><span>avg. close time</span></div>
-          <div class="stat"><strong>4.9 ★</strong><span>client rating</span></div>
+        <div class="preview-foot">
+          Designed to sit on top of an existing site and CRM — a focused front door for new leads.
         </div>
       </div>
     </aside>
   </div>
 </header>
 
-<!-- ============ TRUST STRIP ============ -->
-<div class="trust-strip">
-  <div class="container trust-row">
-    <div class="trust-item"><span class="dot"></span> Purchase &amp; refinance</div>
-    <div class="trust-item"><span class="dot"></span> Conventional · FHA · VA · Jumbo</div>
-    <div class="trust-item"><span class="dot"></span> Hard &amp; private money</div>
-    <div class="trust-item"><span class="dot"></span> Investor &amp; commercial</div>
-    <div class="trust-item"><span class="dot"></span> Real estate listings</div>
-  </div>
-</div>
-
-<!-- ============ HOW WE HELP ============ -->
-<section id="how">
+<!-- ============ WHAT THIS IMPROVES ============ -->
+<section id="improves" class="improves-section">
   <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">How it works</span>
-      <h2>Tell us where you are. We'll meet you there.</h2>
-      <p>Most lenders make you fit their box. We start by listening — then build the right path, whether that's a 30-year fixed, a quick bridge loan, or just an honest answer.</p>
+    <div class="improves-head">
+      <span class="eyebrow">What this improves</span>
+      <h2>Small clarifications, real downstream impact.</h2>
+      <p>The goal isn't a redesign — it's a calmer, clearer first interaction for new leads, and a tidier handoff to the team.</p>
+    </div>
+    <div class="improves-grid">
+      <div class="improve-card">
+        <div class="ico-box">·</div>
+        <h4>Less decision overload</h4>
+        <p>One clear next step instead of a wall of options. Visitors pick the lane that fits them and move on.</p>
+      </div>
+      <div class="improve-card">
+        <div class="ico-box">→</div>
+        <h4>Faster routing to the right person</h4>
+        <p>Each lane points to the team member who actually handles that kind of file — no guessing, no triage.</p>
+      </div>
+      <div class="improve-card">
+        <div class="ico-box">↻</div>
+        <h4>Better follow-up after first contact</h4>
+        <p>Whether the lead fills the form or calls in, the next touch is faster and more consistent.</p>
+      </div>
+      <div class="improve-card">
+        <div class="ico-box">≡</div>
+        <h4>Cleaner lead notes in the CRM</h4>
+        <p>What the lead said about their need and timing flows straight into the record — not someone's notebook.</p>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- ============ GUIDED INTAKE FLOW ============ -->
-<section id="flow" class="intake-section" style="padding-top: 0;">
+<section id="flow" class="intake-section">
   <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Try the guided intake</span>
+      <h2>A short, step-by-step path — about 60 seconds.</h2>
+      <p>Click through the demo to see how the flow guides a new lead from "I have a question" to "the right person knows what you need."</p>
+    </div>
+
     <div class="intake-card">
       <div class="intake-head">
         <span class="step-label" id="stepLabel">Step 1 of 4 · What you need</span>
@@ -416,61 +476,46 @@
         </div>
       </div>
 
-      <!-- STEP 1: WHAT DO YOU NEED -->
+      <!-- STEP 1: NEED -->
       <div id="step1" class="intake-body">
         <h3>What do you need help with?</h3>
-        <p class="sub">Pick the one that feels closest — we'll narrow it down from there.</p>
+        <p class="sub">Pick the option that's closest. You can change it later — this just helps us route you to the right person.</p>
         <div class="choice-grid">
           <div class="choice" data-need="buy"><div class="choice-icon">B</div><div class="choice-text">Buy a home<small>Pre-approval, shopping, or under contract</small></div></div>
-          <div class="choice" data-need="refi"><div class="choice-icon">R</div><div class="choice-text">Refinance<small>Lower rate, cash-out, or pay it off faster</small></div></div>
-          <div class="choice" data-need="sell"><div class="choice-icon">S</div><div class="choice-text">Sell a home<small>Listing, pricing, or quick equity check</small></div></div>
-          <div class="choice" data-need="hardmoney"><div class="choice-icon">H</div><div class="choice-text">Hard or private money<small>Fast-close, fix &amp; flip, or bridge</small></div></div>
-          <div class="choice" data-need="investor"><div class="choice-icon">I</div><div class="choice-text">Investor or commercial<small>Rentals, multifamily, DSCR, commercial</small></div></div>
-          <div class="choice" data-need="question"><div class="choice-icon">?</div><div class="choice-text">General question<small>Not sure yet — just want to talk</small></div></div>
+          <div class="choice" data-need="refi"><div class="choice-icon">R</div><div class="choice-text">Refinance<small>Lower rate, cash-out, or shorter term</small></div></div>
+          <div class="choice" data-need="sell"><div class="choice-icon">S</div><div class="choice-text">Sell a home<small>Listing, pricing, or equity check</small></div></div>
+          <div class="choice" data-need="investment"><div class="choice-icon">I</div><div class="choice-text">Investment property<small>Rentals, DSCR, fix &amp; flip</small></div></div>
+          <div class="choice" data-need="commercial"><div class="choice-icon">C</div><div class="choice-text">Commercial<small>Multi-unit, mixed-use, commercial</small></div></div>
+          <div class="choice" data-need="hardmoney"><div class="choice-icon">H</div><div class="choice-text">Hard money or private money<small>Bridge, short-term, fast-close</small></div></div>
+          <div class="choice" data-need="notsure" style="grid-column: 1 / -1;"><div class="choice-icon">?</div><div class="choice-text">Not sure yet<small>That's fine — we'll help you figure it out</small></div></div>
         </div>
       </div>
 
       <!-- STEP 2: TIMING -->
       <div id="step2" class="intake-body hidden">
-        <h3>How soon do you need help?</h3>
-        <p class="sub">No pressure — this just helps us route you to the right person.</p>
+        <h3>How soon are you looking to move forward?</h3>
+        <p class="sub">A rough timeframe is fine. This helps the right person prep for the conversation.</p>
         <div class="choice-grid">
-          <div class="choice" data-when="today"><div class="choice-icon">!</div><div class="choice-text">Today<small>I need to talk to someone now</small></div></div>
-          <div class="choice" data-when="thisweek"><div class="choice-icon">7</div><div class="choice-text">This week<small>I'd like a callback in the next few days</small></div></div>
-          <div class="choice" data-when="3060"><div class="choice-icon">30</div><div class="choice-text">30–60 days<small>Planning ahead, getting prepared</small></div></div>
-          <div class="choice" data-when="exploring"><div class="choice-icon">~</div><div class="choice-text">Just exploring<small>Gathering info, no rush</small></div></div>
+          <div class="choice" data-when="asap"><div class="choice-icon">!</div><div class="choice-text">ASAP<small>I'd like to talk today</small></div></div>
+          <div class="choice" data-when="thisweek"><div class="choice-icon">7</div><div class="choice-text">This week<small>A call back in the next few days works</small></div></div>
+          <div class="choice" data-when="thismonth"><div class="choice-icon">30</div><div class="choice-text">This month<small>Planning the next few weeks</small></div></div>
+          <div class="choice" data-when="1to3"><div class="choice-icon">90</div><div class="choice-text">1–3 months<small>Getting prepared, not rushing</small></div></div>
+          <div class="choice" data-when="exploring" style="grid-column: 1 / -1;"><div class="choice-icon">~</div><div class="choice-text">Just exploring<small>Gathering information, no rush</small></div></div>
         </div>
       </div>
 
-      <!-- STEP 3: QUALIFYING QUESTIONS (lane-specific, rendered dynamically) -->
+      <!-- STEP 3: CONTACT INFO -->
       <div id="step3" class="intake-body hidden">
-        <h3>A couple quick questions</h3>
-        <p class="sub">So your specialist isn't asking you the basics on the first call.</p>
-        <div id="laneQuestions" class="lane-questions"></div>
-      </div>
-
-      <!-- STEP 4: REVIEW + CONTACT -->
-      <div id="step4" class="intake-body hidden">
-        <h3>Here's what you told us</h3>
-        <p class="sub">Quick read-back before we send this to the right person on our team.</p>
-        <div class="review-card">
-          <div class="recap-label">Your request</div>
-          <div class="review-row"><span>What you need</span><span id="r_need">—</span></div>
-          <div class="review-row"><span>Timeframe</span><span id="r_when">—</span></div>
-          <div class="review-row" id="r_q1_row"><span id="r_q1_label">—</span><span id="r_q1">—</span></div>
-          <div class="review-row" id="r_q2_row"><span id="r_q2_label">—</span><span id="r_q2">—</span></div>
-          <div class="next-step-pill" id="r_nextstep">Recommended: a 15-minute discovery call</div>
-        </div>
-
-        <h3 style="font-size:1.25rem; margin-top: 24px;">How can we reach you?</h3>
+        <h3>How can we reach you?</h3>
+        <p class="sub">A few details so the right person can follow up the way you prefer.</p>
         <div class="input-row">
           <div class="input-block">
-            <label for="f_name">Your name</label>
+            <label for="f_name">Name</label>
             <input id="f_name" type="text" placeholder="First &amp; last" />
           </div>
           <div class="input-block">
             <label for="f_phone">Phone</label>
-            <input id="f_phone" type="tel" placeholder="(916) 555-0123" />
+            <input id="f_phone" type="tel" placeholder="(000) 000-0000" />
           </div>
         </div>
         <div class="input-block">
@@ -478,43 +523,45 @@
           <input id="f_email" type="email" placeholder="you@example.com" />
         </div>
         <div class="input-block">
-          <label for="f_comments">Anything else we should know?</label>
-          <textarea id="f_comments" rows="3" placeholder="Property address, target rate, timeline detail, the long version of the story…"></textarea>
+          <label for="f_comments">Anything else we should know? <span style="font-weight:400; color:var(--muted);">(optional)</span></label>
+          <textarea id="f_comments" rows="3" placeholder="Property address, target rate, timing detail, the longer version of the story…"></textarea>
         </div>
       </div>
 
-      <!-- STEP 5: SUBMITTED / RESPONSE -->
+      <!-- STEP 4: READBACK + NEXT STEPS -->
+      <div id="step4" class="intake-body hidden">
+        <h3>Here's what we heard.</h3>
+        <p class="sub">A quick read-back before we route this to the right person.</p>
+
+        <div class="review-card">
+          <div class="recap-label">Your request</div>
+          <div class="review-row"><span>Need</span><span id="r_need">—</span></div>
+          <div class="review-row"><span>Timeframe</span><span id="r_when">—</span></div>
+          <div class="review-row"><span>Best contact</span><span id="r_contact">—</span></div>
+          <div class="review-row" id="r_notes_row"><span>Notes</span><span id="r_notes">—</span></div>
+          <div class="next-step-pill" id="r_nextstep">Recommended: a short discovery call</div>
+        </div>
+
+        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; margin: 22px 0 10px;">Pick a next step</h4>
+        <div class="action-buttons">
+          <button class="action-btn">📞 Request a call</button>
+          <button class="action-btn">💬 Send a text</button>
+          <button class="action-btn">🏢 Book in-person</button>
+        </div>
+
+        <div class="text-first-note">
+          <strong>Prefer to text first?</strong> Tap "Send a text" and we'll know what you need before we reply.
+        </div>
+      </div>
+
+      <!-- STEP 5: CONFIRMATION -->
       <div id="step5" class="intake-body hidden">
         <div class="confirmation">
           <div class="check-circle">✓</div>
-          <h3>Thanks — we've got you.</h3>
-          <p>Your request is routed to the right specialist. Here's who's reaching out.</p>
+          <h3 style="margin-bottom: 6px;">Thanks — we've got it.</h3>
+          <p>The right person on the team is the next touch. Expect a follow-up the way you asked us to reach you.</p>
+          <p style="font-size: .82rem; color: var(--muted); font-style: italic; margin-top: 18px;">Demo concept — no real message is sent.</p>
         </div>
-        <div class="contact-card-row">
-          <div class="contact-card">
-            <div class="role">Your loan specialist</div>
-            <div class="name">Sample Specialist</div>
-            <div class="meta">Senior Mortgage Advisor · NMLS #0000000</div>
-            <div class="meta mt-1">📞 (916) 555-0188</div>
-            <div class="meta">✉️ sample@example.com</div>
-          </div>
-          <div class="contact-card">
-            <div class="role">Office</div>
-            <div class="name">Rocklin, CA</div>
-            <div class="meta">Mon–Fri, 9am–6pm PT</div>
-            <div class="meta mt-1">📞 (916) 555-0100</div>
-            <div class="meta">📍 1234 Sample Way, Rocklin</div>
-          </div>
-        </div>
-        <div class="example-banner">⚠ Example contact only — names and numbers here are placeholders for the demo, not real MAE Capital staff.</div>
-
-        <div class="action-buttons">
-          <button class="action-btn">📞 Request a call</button>
-          <button class="action-btn">💬 Send us a text</button>
-          <button class="action-btn">🏢 Book in-person appt</button>
-          <button class="action-btn">🖥️ Book online appt</button>
-        </div>
-        <a href="#" class="calendar-link center" style="text-align:center;">View live calendar availability →</a>
       </div>
 
       <!-- FOOTER NAV -->
@@ -522,63 +569,10 @@
         <button id="backBtn" class="btn btn-ghost hidden">← Back</button>
         <span class="small-note" id="footerNote">Takes about 60 seconds.</span>
         <button id="nextBtn" class="btn btn-primary hidden">Continue →</button>
-        <button id="submitBtn" class="btn btn-primary hidden">Send to a specialist →</button>
+        <button id="submitBtn" class="btn btn-primary hidden">Send to the right person →</button>
         <button id="restartBtn" class="btn btn-outline hidden">Start over</button>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- ============ ROI SECTION ============ -->
-<section id="roi" class="roi-section">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow" style="color: #e6c98a;">Operator ROI · Demo concept</span>
-      <h2>What this could be worth, in plain numbers.</h2>
-      <p>MAE Capital reports 10–20 inbound leads per day and says it's already getting more than it can fully service. Here's a conservative read on what better routing, faster response, and one source of truth could mean — based on industry-standard lead-economics ranges.</p>
-    </div>
-
-    <div class="roi-band-row">
-      <div class="roi-card">
-        <span class="band-label">Conservative</span>
-        <h3>Quick wins, light lift</h3>
-        <div class="roi-number">+$8K</div>
-        <div class="roi-sub">added net monthly contribution</div>
-        <ul class="roi-list">
-          <li>1–2 extra leads converted/week from faster first response</li>
-          <li>~5 hrs/week of manual texting reclaimed across the team</li>
-          <li>Missed-call recovery via automatic SMS follow-up</li>
-        </ul>
-      </div>
-
-      <div class="roi-card" style="background: rgba(255,255,255,.10); border-color: rgba(255,255,255,.22);">
-        <span class="band-label">Base case</span>
-        <h3>The realistic target</h3>
-        <div class="roi-number">+$22K</div>
-        <div class="roi-sub">added net monthly contribution</div>
-        <ul class="roi-list">
-          <li>3–5 extra leads converted/week from smart routing &amp; instant intake</li>
-          <li>~15 hrs/week of scheduling + manual follow-up reclaimed</li>
-          <li>Fewer leads slipping through cracks between MLO &amp; agent side</li>
-          <li>Cleaner pipeline visibility for the leadership team</li>
-        </ul>
-      </div>
-
-      <div class="roi-card">
-        <span class="band-label">Strong upside</span>
-        <h3>If automation lands well</h3>
-        <div class="roi-number">+$45K</div>
-        <div class="roi-sub">added net monthly contribution</div>
-        <ul class="roi-list">
-          <li>Higher capture rate on hard-money &amp; investor lanes (premium files)</li>
-          <li>Re-engagement of cold/old leads via warm sequences</li>
-          <li>Referral partners get a real pipeline view, send more</li>
-          <li>Team scales without proportional admin headcount</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="roi-foot">Demo estimates only — bands are illustrative ranges for a sub-$2M/yr originator, not a guarantee. Final modeling is run against your actual lead, conversion, and average-loan data.</div>
   </div>
 </section>
 
@@ -586,53 +580,88 @@
 <section id="behind" class="backend-section">
   <div class="container">
     <div class="section-head">
-      <span class="eyebrow">What happens in the background</span>
-      <h2>The 60 seconds after a client hits "send."</h2>
-      <p>The customer sees a clean confirmation. Your team sees a fully-prepped lead, in the right place, with the right context — already moving.</p>
+      <span class="eyebrow">What happens behind the scenes</span>
+      <h2>Clearer leads in, calmer follow-up out.</h2>
+    </div>
+
+    <div class="backend-intro">
+      When new leads are clearer, faster to route, and easier to follow up with, the value can show up in the first few months through better response time, less manual admin work, and fewer missed opportunities.
     </div>
 
     <div class="pipeline">
       <div class="step">
         <div class="num">1</div>
-        <span class="ico">📨</span>
-        <h4>Instant confirmation</h4>
-        <p>Customer gets an immediate text + email — branded, warm, sets expectations on next step and timing.</p>
+        <h4>Lead comes in</h4>
+        <p>Through the guided intake — with their lane and timing already captured.</p>
       </div>
       <div class="step">
         <div class="num">2</div>
-        <span class="ico">🎯</span>
-        <h4>Smart routing</h4>
-        <p>Lane + timeframe + zip route the lead to the right MLO or agent — hard money goes to the hard-money desk, not the queue.</p>
+        <h4>Info is organized instantly</h4>
+        <p>The lead's answers are structured and ready to read at a glance.</p>
       </div>
       <div class="step">
         <div class="num">3</div>
-        <span class="ico">📇</span>
-        <h4>CRM auto-updated</h4>
-        <p>Contact, lane, qualifying answers, source URL, and recap all written into the CRM record — no manual entry.</p>
+        <h4>Correct team member is notified</h4>
+        <p>Routing is based on the lane the lead picked — the right person sees it first.</p>
       </div>
       <div class="step">
         <div class="num">4</div>
-        <span class="ico">🔔</span>
-        <h4>Team pinged</h4>
-        <p>Slack / Telegram message lands in the right channel with a "claim this lead" button. First-touch SLA timer starts.</p>
+        <h4>Contact created or updated in the CRM</h4>
+        <p>Whether they're new or returning, the record stays clean.</p>
       </div>
       <div class="step">
         <div class="num">5</div>
-        <span class="ico">🔄</span>
-        <h4>Status synced back</h4>
-        <p>Every follow-up, call note, and stage change syncs back to the CRM. Nothing lives only in someone's head.</p>
+        <h4>Follow-up can go out automatically</h4>
+        <p>A first text or email acknowledges them within minutes — even after hours.</p>
+      </div>
+      <div class="step">
+        <div class="num">6</div>
+        <h4>Future updates stay attached</h4>
+        <p>Call notes, replies, and status changes stay on the same contact record.</p>
       </div>
     </div>
 
-    <div class="integrations-row">
-      <span class="integration-chip">CRM</span>
-      <span class="integration-chip">Twilio SMS</span>
-      <span class="integration-chip">Email automation</span>
-      <span class="integration-chip">Slack</span>
-      <span class="integration-chip">Telegram</span>
-      <span class="integration-chip">Calendar (Cal / Calendly)</span>
-      <span class="integration-chip">Google Sheets reporting</span>
-      <span class="integration-chip">Encompass / LOS handoff</span>
+    <div class="concept-note">Outline of how the back-end could be configured — not live functionality on this demo page.</div>
+  </div>
+</section>
+
+<!-- ============ ROI EXAMPLE BOX ============ -->
+<section class="roi-section">
+  <div class="container-narrow">
+    <div class="section-head">
+      <span class="eyebrow">A modest, believable read on impact</span>
+      <h2>Example impact over the next few months.</h2>
+    </div>
+
+    <div class="roi-box">
+      <div class="roi-label">Example impact over the next few months</div>
+      <h3>Where the value usually shows up first.</h3>
+      <p class="roi-lead">No wild claims — this is what tends to be true when intake gets a little clearer and lead handling gets a little calmer.</p>
+      <ul class="roi-list">
+        <li>Fewer leads lost to slow response.</li>
+        <li>Less time spent manually sorting calls and messages.</li>
+        <li>Clearer handoff between the front-end inquiry and team follow-up.</li>
+        <li>More consistency when leads come in after hours or during busy times.</li>
+      </ul>
+      <div class="roi-foot">Conservative directional examples — not a forecast. The point is the shape of the change, not a specific number.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WORKS WITH EXISTING SYSTEMS ============ -->
+<section class="works-section">
+  <div class="container">
+    <div class="works-card">
+      <span class="eyebrow">Built to layer in</span>
+      <h3>Built to work with the systems you already have.</h3>
+      <p>This type of guided intake flow does not have to replace your current website, CRM, or team process. It can start as a focused front-door layer for new leads, then connect into the tools you already use.</p>
+      <p>Where it tends to plug in:</p>
+      <div class="works-pills">
+        <span class="works-pill">Your existing CRM</span>
+        <span class="works-pill">Your team's calendar</span>
+        <span class="works-pill">Team notifications</span>
+        <span class="works-pill">Email &amp; text follow-up</span>
+      </div>
     </div>
   </div>
 </section>
@@ -640,22 +669,27 @@
 <!-- ============ CLOSING CTA ============ -->
 <section class="closing">
   <div class="container">
-    <span class="eyebrow">One conversation, end to end</span>
-    <h2>Mortgage. Real estate. One team that actually talks to each other.</h2>
-    <p>Start with a 60-second intake — we'll take it from there.</p>
-    <a href="#flow" class="btn btn-primary">Begin guided intake →</a>
+    <span class="eyebrow">A calmer front door</span>
+    <h2>A clearer first step, a faster second one.</h2>
+    <p>The intake doesn't replace what's working — it just makes the first 60 seconds of a new lead's experience easier on everyone.</p>
+    <a href="#flow" class="btn btn-primary">Try the guided intake →</a>
   </div>
 </section>
+
+<!-- ============ PRE-FOOTER NOTE ============ -->
+<div class="pre-footer-note">
+  Demo concept only — not affiliated.
+</div>
 
 <!-- ============ FOOTER ============ -->
 <footer>
   <div class="container">
     <div>
       <div class="mp-attribution">Brought to you by <a href="https://mparklab.com" target="_blank" rel="noopener">Mparklab.com</a></div>
-      <div style="margin-top: 6px; font-size: .82rem;">Guided intake + automation strategy for mortgage &amp; real estate operators.</div>
+      <div style="margin-top: 6px; font-size: .82rem;">Guided intake + routing concept for mortgage &amp; real estate operators.</div>
     </div>
     <div class="demo-note">
-      Demo concept only — not affiliated with MAE Capital Mortgage. All names, phone numbers, statistics, and contact details on this page are illustrative placeholders for prototyping purposes.
+      Demo concept only — not affiliated with MAE Capital Mortgage. All copy, structure, and figures on this page are illustrative for discussion purposes and do not represent any live service or commitment.
     </div>
   </div>
 </footer>
@@ -664,10 +698,8 @@
   // ---------- STATE ----------
   const state = {
     step: 1,
-    need: null,    // buy / refi / sell / hardmoney / investor / question
-    when: null,    // today / thisweek / 3060 / exploring
-    q1: null, q2: null,
-    q1_label: "", q2_label: "",
+    need: null,
+    when: null,
   };
 
   const labels = {
@@ -675,51 +707,26 @@
       buy: "Buying a home",
       refi: "Refinancing",
       sell: "Selling a home",
+      investment: "Investment property",
+      commercial: "Commercial",
       hardmoney: "Hard / private money",
-      investor: "Investor or commercial",
-      question: "General question"
+      notsure: "Not sure yet"
     },
     when: {
-      today: "Today",
+      asap: "ASAP",
       thisweek: "This week",
-      "3060": "30–60 days",
+      thismonth: "This month",
+      "1to3": "1–3 months",
       exploring: "Just exploring"
     }
   };
 
-  // Lane-specific questions
-  const laneQuestions = {
-    buy: {
-      q1: { label: "Where are you in the process?", options: ["Just starting", "Pre-approved, shopping", "Under contract", "Need pre-approval today"] },
-      q2: { label: "Estimated price range?", options: ["Under $400K", "$400K–$700K", "$700K–$1M", "$1M+"] }
-    },
-    refi: {
-      q1: { label: "What's the goal?", options: ["Lower my rate", "Cash out", "Shorten my term", "Drop PMI"] },
-      q2: { label: "Approx. current loan balance?", options: ["Under $300K", "$300K–$600K", "$600K–$1M", "$1M+"] }
-    },
-    sell: {
-      q1: { label: "Are you under contract anywhere new?", options: ["Yes, already in escrow", "Yes, casually looking", "No — sell first", "Not sure"] },
-      q2: { label: "Property type?", options: ["Single family", "Condo / townhome", "Multi-unit", "Land"] }
-    },
-    hardmoney: {
-      q1: { label: "What's the use case?", options: ["Fix &amp; flip", "Bridge / short-term", "Cash-out on rental", "Land / construction"] },
-      q2: { label: "How fast do you need to close?", options: ["1–2 weeks", "2–4 weeks", "30+ days", "Flexible"] }
-    },
-    investor: {
-      q1: { label: "Property strategy?", options: ["DSCR / rental", "Multifamily 5+", "Commercial", "Mixed-use"] },
-      q2: { label: "Number of units / doors in this deal?", options: ["1–4", "5–10", "11–50", "50+"] }
-    },
-    question: {
-      q1: { label: "What's the question about?", options: ["Rates today", "My credit / qualifying", "Process / timeline", "Something else"] },
-      q2: { label: "Best way to reach you?", options: ["Text", "Call", "Email", "Whichever's fastest"] }
-    }
-  };
-
   const nextStepCopy = {
-    today: "Recommended: a same-day call with a specialist",
-    thisweek: "Recommended: a 15-minute discovery call this week",
-    "3060": "Recommended: a planning call + pre-approval prep",
-    exploring: "Recommended: rate sheet + a no-pressure intro call"
+    asap: "Recommended: a same-day call with the right team member",
+    thisweek: "Recommended: a short call this week",
+    thismonth: "Recommended: a planning call + prep checklist",
+    "1to3": "Recommended: a prep call + a rate / market snapshot",
+    exploring: "Recommended: an intro email with a few useful resources"
   };
 
   // ---------- EL REFS ----------
@@ -733,7 +740,6 @@
   function render() {
     stepEls.forEach((el, i) => { if (el) el.classList.toggle("hidden", i !== state.step); });
 
-    // progress
     progressEls.forEach((el, i) => {
       el.classList.remove("active", "done");
       if (i + 1 < state.step) el.classList.add("done");
@@ -743,68 +749,43 @@
     const labelsMap = {
       1: "Step 1 of 4 · What you need",
       2: "Step 2 of 4 · Timing",
-      3: "Step 3 of 4 · A couple details",
-      4: "Step 4 of 4 · Review &amp; contact",
-      5: "Done · We're on it"
+      3: "Step 3 of 4 · How to reach you",
+      4: "Step 4 of 4 · Review & next step",
+      5: "Done · We've got it"
     };
-    stepLabel.innerHTML = labelsMap[state.step] || "";
+    stepLabel.textContent = labelsMap[state.step] || "";
 
-    // footer buttons
     backBtn.classList.toggle("hidden", state.step === 1 || state.step === 5);
-    nextBtn.classList.toggle("hidden", state.step >= 4);
+    nextBtn.classList.toggle("hidden", state.step !== 3);
     submitBtn.classList.toggle("hidden", state.step !== 4);
     restartBtn.classList.toggle("hidden", state.step !== 5);
 
-    if (state.step === 5) footerNote.textContent = "An example specialist would be in touch within minutes.";
-    else if (state.step === 4) footerNote.textContent = "Your info stays with the MAE team only.";
+    if (state.step === 5) footerNote.textContent = "Demo only — no real message is sent.";
+    else if (state.step === 4) footerNote.textContent = "Your info stays with the team only.";
+    else if (state.step === 3) footerNote.textContent = "Name and one way to reach you is enough.";
     else footerNote.textContent = "Takes about 60 seconds.";
 
-    // Step 3: render lane questions
-    if (state.step === 3 && state.need) renderLaneQuestions();
-
-    // Step 4: review
     if (state.step === 4) renderReview();
-  }
-
-  function renderLaneQuestions() {
-    const q = laneQuestions[state.need];
-    const wrap = $("laneQuestions");
-    if (!q) { wrap.innerHTML = ""; return; }
-    wrap.innerHTML = `
-      <h4>${q.q1.label}</h4>
-      <div class="choice-grid" data-qkey="q1">
-        ${q.q1.options.map(opt => `<div class="choice qchoice" data-value="${opt}"><div class="choice-icon">•</div><div class="choice-text">${opt}</div></div>`).join("")}
-      </div>
-      <h4 style="margin-top:22px;">${q.q2.label}</h4>
-      <div class="choice-grid" data-qkey="q2">
-        ${q.q2.options.map(opt => `<div class="choice qchoice" data-value="${opt}"><div class="choice-icon">•</div><div class="choice-text">${opt}</div></div>`).join("")}
-      </div>
-    `;
-    state.q1_label = q.q1.label;
-    state.q2_label = q.q2.label;
-
-    // Attach handlers + reflect selection
-    wrap.querySelectorAll("[data-qkey]").forEach(grid => {
-      const key = grid.getAttribute("data-qkey");
-      grid.querySelectorAll(".qchoice").forEach(ch => {
-        if (state[key] === ch.dataset.value) ch.classList.add("selected");
-        ch.addEventListener("click", () => {
-          grid.querySelectorAll(".qchoice").forEach(x => x.classList.remove("selected"));
-          ch.classList.add("selected");
-          state[key] = ch.dataset.value;
-        });
-      });
-    });
   }
 
   function renderReview() {
     $("r_need").textContent = labels.need[state.need] || "—";
     $("r_when").textContent = labels.when[state.when] || "—";
-    $("r_q1_label").textContent = state.q1_label || "Detail 1";
-    $("r_q2_label").textContent = state.q2_label || "Detail 2";
-    $("r_q1").innerHTML = state.q1 || "—";
-    $("r_q2").innerHTML = state.q2 || "—";
-    $("r_nextstep").textContent = nextStepCopy[state.when] || "Recommended: a discovery call";
+
+    const name = $("f_name").value.trim();
+    const phone = $("f_phone").value.trim();
+    const email = $("f_email").value.trim();
+    const notes = $("f_comments").value.trim();
+
+    const contactParts = [];
+    if (name) contactParts.push(name);
+    if (phone) contactParts.push(phone);
+    if (email) contactParts.push(email);
+    $("r_contact").textContent = contactParts.length ? contactParts.join(" · ") : "—";
+    $("r_notes").textContent = notes || "—";
+    $("r_notes_row").style.display = notes ? "" : "none";
+
+    $("r_nextstep").textContent = nextStepCopy[state.when] || "Recommended: a short discovery call";
   }
 
   // ---------- HANDLERS ----------
@@ -814,7 +795,6 @@
         document.querySelectorAll('#step1 .choice').forEach(x => x.classList.remove("selected"));
         c.classList.add("selected");
         state.need = c.dataset.need;
-        // auto-advance after small delay for snappy feel
         setTimeout(() => { state.step = 2; render(); }, 180);
       });
     });
@@ -832,27 +812,23 @@
 
   backBtn.addEventListener("click", () => { if (state.step > 1) { state.step -= 1; render(); } });
   nextBtn.addEventListener("click", () => {
-    if (state.step === 3 && (!state.q1 || !state.q2)) {
-      footerNote.textContent = "Pick an answer for both questions to continue.";
-      return;
+    if (state.step === 3) {
+      const name = $("f_name").value.trim();
+      const phone = $("f_phone").value.trim();
+      const email = $("f_email").value.trim();
+      if (!name || (!phone && !email)) {
+        footerNote.textContent = "Add a name + phone or email so we can reach back.";
+        return;
+      }
+      state.step = 4; render();
     }
-    if (state.step < 4) { state.step += 1; render(); }
   });
   submitBtn.addEventListener("click", () => {
-    // Light validation — demo
-    const name = $("f_name").value.trim();
-    const phone = $("f_phone").value.trim();
-    const email = $("f_email").value.trim();
-    if (!name || (!phone && !email)) {
-      footerNote.textContent = "Add a name + phone or email so we can reach back.";
-      return;
-    }
     state.step = 5; render();
-    // Scroll into view
     document.getElementById("flow").scrollIntoView({ behavior: "smooth", block: "start" });
   });
   restartBtn.addEventListener("click", () => {
-    state.step = 1; state.need = null; state.when = null; state.q1 = null; state.q2 = null;
+    state.step = 1; state.need = null; state.when = null;
     document.querySelectorAll(".choice").forEach(c => c.classList.remove("selected"));
     ["f_name","f_phone","f_email","f_comments"].forEach(id => { const el = $(id); if (el) el.value = ""; });
     render();
